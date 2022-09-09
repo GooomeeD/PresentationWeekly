@@ -1,0 +1,65 @@
+for i in range(len(array)):
+    h = Cm(2.67)*(i+1)
+    for j in range (len(array[i])):
+        ni = array[i].index(1)
+        nj = array[i].count
+        ln = ni * 1.6625
+            if k == ni:
+                left = (Cm(5.39) + (Cm(lni)))
+                width = (Cm(1.6625) * nj)
+        shape = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, left, top, width, height)
+        fill = shape.fill
+        fill.gradient()
+        # Добавление градиентной точки, но презентация не запускается
+        # gsLst = fill.gradient_stops._gsLst    #gsLst.add_gs()
+        fill.gradient_angle = 180
+        gr_stop = fill.gradient_stops
+        gr_stop1 = gr_stop[-1]
+        gr_stop2 = gr_stop[0]
+        gr_stop3 = gr_stop[1]
+        color1 = gr_stop1.color
+        color1.rgb = RGBColor(84, 130, 53)
+        color2 = gr_stop2.color
+        color2.rgb = RGBColor(84, 130, 53)
+        color3 = gr_stop3.color
+        # cвтело-голубой 94, 158, 239
+        color3.rgb = RGBColor(94, 158, 239)
+
+        adjs = shape.adjustments
+        adjs[0] = 0.13
+
+        line = shape.line
+        line.width = Pt(6)
+        line.color.rgb = RGBColor(49, 51, 63)
+        to_slide = input('Ввеите слайд гипперссылки')
+        shape.click_action.target_slide = to_slide
+
+
+
+
+height = Cm(2.67)
+
+    ni = array.index(1)
+
+    lni = ni * 1.6625
+    nj = array.count(1)
+
+    for k in range(len(array)):
+        if k == ni:
+            left = (Cm(5.39) + (Cm(lni)))
+            width = (Cm(1.6625) * nj)
+    shape = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, left, top, width, height)
+    fill = shape.fill
+    fill.solid()
+    fill.fore_color.rgb = RGBColor(70, 72, 83)
+
+    adjs = shape.adjustments
+    adjs[0] = 0.13
+
+    line = shape.line
+    line.width = Pt(6)
+    line.color.rgb = RGBColor(49, 51, 63)
+
+    shape.click_action.target_slide = to_slide
+
+
